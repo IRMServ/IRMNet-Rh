@@ -1,0 +1,20 @@
+{
+    "name": "irmnet/rh",
+    "description": "Compras module for IRMServices intranet.", 
+    "keywords": [
+    "framework",
+    "zf2",
+    "doctrine",
+    "intranet"
+    ],
+    
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload":{
+        "psr-0":{
+            "RH":"src"
+        },
+        "classmap": ["Module.php"]
+    }
+}
