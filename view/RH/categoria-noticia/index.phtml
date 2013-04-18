@@ -1,0 +1,38 @@
+<script>
+    $(document).ready(function(){
+        $("table a").tooltip();
+    });
+</script>
+<div class="row-fluid">
+
+    <div class="span3">
+       <?php include_once(__DIR__.'/../../menu.phtml');?>
+
+    </div>
+    <div class="span9">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Opções</th>
+            </thead>
+            <tbody>
+              <?php foreach($this->paginator as $categoria):?>
+                  <tr>
+                    <td><?php echo $categoria->getCategorianome();?></td>
+                    <td><?php echo $categoria->getDescricao();?></td>
+                    <td><a data-toggle="tooltip" title="Editar registro" href="<?php echo $this->url('rh/categoria-noticia/store',array('idcat'=>$categoria->getIdcategorianoticia()));?>" class="btn"><i class="icon-pencil"></i></a></td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><a data-toggle="tooltip" title="Adicionar registro" href='<?php echo $this->url('rh/categoria-noticia/store');?>' class='btn btn-primary'><i class='icon-plus icon-white'></i></a></td>
+                </tr>
+                
+            </tfoot>
+        </table>
+
+    </div>
+</div>

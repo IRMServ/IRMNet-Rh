@@ -1,0 +1,38 @@
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  
+<script>
+    $(document).ready(function() {
+      
+        $("table a").tooltip();
+        $("input[name='publicacao']").datepicker({
+    dateFormat: 'dd/mm/yy',
+    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+    nextText: 'Próximo',
+    prevText: 'Anterior'
+});
+       
+    });
+</script>
+<div class="row-fluid">
+
+    <div class="span3">
+        <?php include_once(__DIR__ . '/../../menu.phtml'); ?>
+
+    </div>
+    <div class="span9">
+        <?php
+        $form = $this->form;
+
+        $form->prepare();
+
+        echo $this->form()->openTag($form);
+        echo $this->formCollection($form);
+        echo $this->form()->closeTag();
+        ?>
+
+    </div>
+</div>

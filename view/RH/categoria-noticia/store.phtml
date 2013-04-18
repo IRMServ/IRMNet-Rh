@@ -1,0 +1,24 @@
+<script>
+    $(document).ready(function(){
+        $("table a").tooltip();
+    });
+</script>
+<div class="row-fluid">
+
+    <div class="span3">
+       <?php include_once(__DIR__.'/../../menu.phtml');?>
+
+    </div>
+    <div class="span9">
+      <?php
+$form = $this->form;
+
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();
+?>
+
+    </div>
+</div>

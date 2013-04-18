@@ -1,0 +1,71 @@
+<style>
+
+   
+    .span8 h6{       
+        height:20px;
+        background-color: #942a25;
+        color:white;
+        padding:5px;
+        padding-right: 0;
+        margin-top:0px;
+        border-radius:0px 10px 0px 10px;
+    }
+    .span8 h1{
+      margin-bottom:70px;
+    }
+    .span8 a
+    {
+        color: #942a25;
+        text-decoration: underline;
+        cursor:pointer;
+    }   
+    .span8 a:hover
+    {
+        color: #942a25;
+        text-decoration: underline;
+        cursor:pointer;
+    }   
+
+    .span8 h4,.span12 p
+    {
+        text-indent: 20px;
+    }
+    
+
+    .span8 h5{
+        margin-top:-10px;
+        margin-bottom:-10px;
+    }
+    .noborder
+    {
+        border:0;
+    }
+</style>
+
+
+<div class="row-fluid">
+    <div class="span2 noborder">
+
+
+    </div>
+    <div class="span8">
+        <h1>Categoria: <?php echo $this->noticias[0]->getCategorianoticia_fk()->getCategorianome(); ?></h1>
+        <?php foreach ($this->noticias as $noticia): ?>
+            <h4><a href="<?php echo $this->url('rh/noticias/ver', array('id' => $noticia->getIdnoticia())); ?>" ><?php echo $noticia->getTitulo(); ?></a></h4>
+            <hr>
+            <h5>Data de publicação: <?php echo $noticia->getPublicacao() ?></h5>
+            <hr>
+            <p>
+                <?php echo nl2br($noticia->getTexto()); ?>
+            </p>
+            <hr/>
+        <?php endforeach; ?>
+    </div>
+    <div class="span2 noborder">
+
+
+    </div>
+
+
+
+</div>

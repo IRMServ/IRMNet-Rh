@@ -1,0 +1,51 @@
+<script>
+    $(document).ready(function() {
+        $("table a").tooltip();
+    });
+</script>
+<div class="row-fluid">
+
+    <div class="span3">
+        <?php
+        
+        include_once(__DIR__ . '/../../menu.phtml'); ?>
+
+    </div>
+    <div class="span9">
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Data de criação</th>
+                    <th>Data de publicação</th>
+                    <th>Categoria</th>
+                    <th>Destaque?</th>
+                    <th>Autor</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($this->paginator as $categoria): ?>
+                    <tr>
+                        <td><?php echo $categoria->getTitulo(); ?></td>
+                        <td><?php echo $categoria->getData(); ?></td>
+                        <td><?php echo $categoria->getPublicacao(); ?></td>
+                        <td><?php echo $categoria->getCategorianoticia_fk()->getCategorianome(); ?></td>
+                        <td><?php echo $categoria->getDestaque() ?'Sim': 'Não' ?></td>
+                        <td><?php echo $categoria->getAutor(); ?></td>
+                        <td><a data-toggle="tooltip" title="Editar registro" href="<?php echo $this->url('rh/noticias/store', array('id' => $categoria->getIdnoticia())); ?>" class="btn"><i class="icon-pencil"></i></a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6"><?php echo( count($this->paginator) > 0 ) ? $this->paginationControl($this->paginator, 'Sliding', 'RH/noticias/pager.phtml',array()) : ""; ?></td>
+                    <td><a data-toggle="tooltip" title="Adicionar registro" href='<?php echo $this->url('rh/noticias/store'); ?>' class='btn btn-primary'><i class='icon-plus icon-white'></i></a></td>
+                </tr>
+
+            </tfoot>
+        </table>
+
+    </div>
+</div>
