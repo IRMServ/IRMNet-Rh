@@ -10,6 +10,23 @@ namespace RH;
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 return array(
+      'acl' => array(
+        'RH' => array(
+            'RH' => array(
+                'RH\Controller\Index:index',              
+            ),
+            'RH - GT' => array(
+                'RH\Controller\Index:index',              
+            ),
+            'RH - T&D' => array(
+                'RH\Controller\Index:index',              
+            ),
+            
+            'TI' => array(
+                'RH\Controller\Index:index',              
+            ),
+        )
+    ),
     'router' => array(
         'routes' => array(
             // This defines the hostname route which forms the base
