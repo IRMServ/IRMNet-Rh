@@ -10,20 +10,124 @@ namespace RH;
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 return array(
-      'acl' => array(
+    'acl' => array(
         'RH' => array(
             'RH' => array(
-                'RH\Controller\Index:index',              
+                'RH\Controller\Index:index',
+                'RH\Controller\CategoriaNoticias:index',
+                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\Noticias:index',
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:store',
+                'RH\Controller\Noticias:categoria',
             ),
             'RH - GT' => array(
-                'RH\Controller\Index:index',              
+                'RH\Controller\Index:index',
+                'RH\Controller\CategoriaNoticias:index',
+                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\Noticias:index',
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:store',
+                'RH\Controller\Noticias:categoria',
             ),
             'RH - T&D' => array(
-                'RH\Controller\Index:index',              
+                'RH\Controller\Index:index',
+                'RH\Controller\CategoriaNoticias:index',
+                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\Noticias:index',
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:store',
+                'RH\Controller\Noticias:categoria',
             ),
-            
+            'CONTROLADORIA'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'ALMOXARIFADO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'COMPRAS'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'DIRETORIA'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'FABRICAÇÃO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'FINANCEIRO - CONTÁBIL'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'FISCAL'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'LOGÍSTICA'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'OCTG - ADMINISTRATIVO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'OCTG - INSPEÇÃO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'OCTG - MACHINE SHOP'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'OCTG - VÁLVULAS'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'OPERACIONAL - OFFSHORE'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'PROJETOS ESPECIAIS'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'QUALIDADE'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'RELATÓRIO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+           
+            'SMS'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'TRANSPORTE'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'PLANEJAMENTO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
+            'JURIDICO'=>array(               
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:categoria',
+            ),
             'TI' => array(
-                'RH\Controller\Index:index',              
+                'RH\Controller\Index:index',
+                'RH\Controller\CategoriaNoticias:index',
+                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\Noticias:index',
+                'RH\Controller\Noticias:ver',
+                'RH\Controller\Noticias:store',
+                'RH\Controller\Noticias:categoria',
             ),
         )
     ),
