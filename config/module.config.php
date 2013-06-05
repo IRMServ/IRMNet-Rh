@@ -14,8 +14,8 @@ return array(
         'RH' => array(
             'RH' => array(
                 'RH\Controller\Index:index',
-                'RH\Controller\CategoriaNoticias:index',
-                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\CategoriaNoticia:index',
+                'RH\Controller\CategoriaNoticia:store',
                 'RH\Controller\Noticias:index',
                 'RH\Controller\Noticias:ver',
                 'RH\Controller\Noticias:store',
@@ -23,8 +23,8 @@ return array(
             ),
             'RH - GT' => array(
                 'RH\Controller\Index:index',
-                'RH\Controller\CategoriaNoticias:index',
-                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\CategoriaNoticia:index',
+                'RH\Controller\CategoriaNoticia:store',
                 'RH\Controller\Noticias:index',
                 'RH\Controller\Noticias:ver',
                 'RH\Controller\Noticias:store',
@@ -32,8 +32,8 @@ return array(
             ),
             'RH - T&D' => array(
                 'RH\Controller\Index:index',
-                'RH\Controller\CategoriaNoticias:index',
-                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\CategoriaNoticia:index',
+                'RH\Controller\CategoriaNoticia:store',
                 'RH\Controller\Noticias:index',
                 'RH\Controller\Noticias:ver',
                 'RH\Controller\Noticias:store',
@@ -122,8 +122,8 @@ return array(
             ),
             'TI' => array(
                 'RH\Controller\Index:index',
-                'RH\Controller\CategoriaNoticias:index',
-                'RH\Controller\CategoriaNoticias:store',
+                'RH\Controller\CategoriaNoticia:index',
+                'RH\Controller\CategoriaNoticia:store',
                 'RH\Controller\Noticias:index',
                 'RH\Controller\Noticias:ver',
                 'RH\Controller\Noticias:store',
