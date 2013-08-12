@@ -21,6 +21,9 @@ use Zend\Validator\File\Size;
 use Zend\Validator\File\Extension;
 use Zend\Filter\File\Rename;
 use \DateTime;
+use MailService\Service\MailService;
+use MailService\Service\ServiceTemplate;
+
 class NoticiasController extends AbstractActionController {
 
     protected $em;
@@ -136,7 +139,14 @@ class NoticiasController extends AbstractActionController {
                         }
                     }
                     $setores->populate($data);
-
+                    $mail = new MailService($this->getServiceLocator(), ServiceTemplate::RH_NOTICIA);
+                    $mail->addFrom('webmaster@irmserv.com.br')
+                            ->setSubject($setores->getTitulo())
+                            ->addTo('webmaster@irmserv.com.br')
+                            ->addBcc('adm@irmserv.com.br')
+                            ->addBcc('tec1@irmserv.com.br')
+                            ->addBcc('tec2@irmserv.com.br')
+                            ->setBody(array('titulo' => $setores->getTitulo(), 'corpo' => $setores->getTexto()))->send();
                     $this->getEntityManager()->persist($setores);
                     $this->getEntityManager()->flush();
                 } else {
@@ -196,7 +206,7 @@ class NoticiasController extends AbstractActionController {
     }
 
     public function categoriaAction() {
-          $data = new DateTime('now');
+        $data = new DateTime('now');
         $em = $this->getEntityManager();
         $not = $em->createQuery("SELECT Noticias FROM RH\Entity\Noticias Noticias where  Noticias.publicacao <= '{$data->format('Y-m-d')}' ORDER BY Noticias.idnoticia DESC");
         $noticias = $not->getResult();
